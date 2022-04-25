@@ -32,7 +32,7 @@ for (let i = 0; i < document.getElementsByClassName('rmv').length; i += 1) {
     const stringData = JSON.stringify(filtered);
     localStorage.setItem('Books', stringData);
     list.remove();
-    window.location.reload();
+    storedBooks.UpdateRack();
   });
 }
 
@@ -41,6 +41,9 @@ document.getElementById('list').addEventListener('click', checkListFunc);
 document.getElementById('new').addEventListener('click', addNewFunc);
 document.getElementById('cont').addEventListener('click', contactFunc);
 
-// Date
-const date = DateTime.now();
-document.getElementById('date').innerHTML = date;
+// Date with interval refresh rate
+const date = () => {
+  document.getElementById('date').innerHTML = DateTime.now();
+};
+
+setInterval(date, 1000);

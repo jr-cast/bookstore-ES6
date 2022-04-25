@@ -8,7 +8,7 @@ const footer = document.getElementById('foot');
 const cont = document.getElementById('cont');
 
 // List
-function checkListFunc() {  /* eslint-disable-line*/
+const checkListFunc = () => {  /* eslint-disable-line*/
   wrapper.classList.remove('hidden');
   addNew.classList.add('hidden');
   title.classList.remove('hidden');
@@ -17,10 +17,10 @@ function checkListFunc() {  /* eslint-disable-line*/
   anchorNew.style.color = 'black';
   cont.style.color = 'black';
   footer.classList.remove('foot');
-}
+};
 
 // Add New
-function addNewFunc() {  /* eslint-disable-line*/
+const addNewFunc = () => {  /* eslint-disable-line*/
   wrapper.classList.add('hidden');
   addNew.classList.remove('hidden');
   title.classList.add('hidden');
@@ -29,10 +29,10 @@ function addNewFunc() {  /* eslint-disable-line*/
   anchorNew.style.color = 'blue';
   footer.classList.remove('foot');
   cont.style.color = 'black';
-}
+};
 
 // Contact
-function contactFunc() {
+const contactFunc = () => {
   contact.classList.remove('hidden');
   wrapper.classList.add('hidden');
   title.classList.add('hidden');
@@ -41,6 +41,6 @@ function contactFunc() {
   anchor.style.color = 'black';
   anchorNew.style.color = 'black';
   cont.style.color = 'blue';
-}
+};
 
 export { checkListFunc, addNewFunc, contactFunc };

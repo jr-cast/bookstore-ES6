@@ -24,7 +24,7 @@ storedBooks.UpdateRack();
 let stringData = JSON.stringify(storedBooks.Books);
 let book;
 
-export function addNewBook() {
+const addNewBook = () => {
   if (!bookTitle.value || !author.value) {
     alert('Enter both book title and author please');
     // Display localStorage Books Collection entries
@@ -37,4 +37,6 @@ export function addNewBook() {
     localStorage.setItem('Books', stringData);
     window.location.reload();
   }
-}
+};
+
+export { addNewBook };

@@ -1,4 +1,4 @@
-export default function displayElements() {
+const displayElements = () => {
   if (localStorage.Books) {
     for (let i = 0; i < JSON.parse(localStorage.Books).length; i += 1) {
       const ul = document.getElementById('bookShelf');
@@ -26,4 +26,6 @@ export default function displayElements() {
       ul.appendChild(li);
     }
   }
-}
+};
+
+export default displayElements;

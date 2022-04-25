@@ -1,1 +1,6 @@
 node_modules
+
+# Linters
+.eslintrc.json
+.hintrc
+.stylelintrc.json

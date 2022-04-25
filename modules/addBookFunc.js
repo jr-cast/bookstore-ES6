@@ -17,7 +17,6 @@ export class Book { /* eslint-disable-line max-classes-per-file */
   }
 }
 
-const addBtn = document.getElementById('addBtn');
 const bookTitle = document.getElementById('title');
 const author = document.getElementById('author');
 const storedBooks = new BooksRack();
@@ -38,5 +37,4 @@ export function addNewBook() {
     localStorage.setItem('Books', stringData);
     window.location.reload();
   }
-};
-
+}

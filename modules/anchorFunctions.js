@@ -43,4 +43,4 @@ function contactFunc() {
   cont.style.color = 'blue';
 }
 
-export { checkListFunc, addNewFunc, contactFunc};
+export { checkListFunc, addNewFunc, contactFunc };

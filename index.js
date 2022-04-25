@@ -1,18 +1,22 @@
-// Import main classes; BooksRack, Book
-import { BooksRack, Book } from "./modules/mainClasses.js";
+// Import BooksRack class
+import { BooksRack } from './modules/mainClasses.js';
 
-// Import AddNewBook Function 
-import { addNewBook } from "./modules/addBookFunc.js";
+// Import AddNewBook Function
+import { addNewBook } from './modules/addBookFunc.js';
 
 // Import DisplayElements Function
-import { displayElements } from "./modules/displayElements.js";
+import displayElements from './modules/displayElements.js';
 
 // Import anchors functions
-import { checkListFunc, addNewFunc, contactFunc } from "./modules/anchorFunctions.js"
+import { checkListFunc, addNewFunc, contactFunc } from './modules/anchorFunctions.js';
+
+// Import luxon
+import { DateTime } from './modules/luxon.js';
 
 // Populate local storage collection with user entries
 const storedBooks = new BooksRack();
 storedBooks.UpdateRack();
+const addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', addNewBook);
 
 // Display localStorage Books Collection entries
@@ -38,6 +42,5 @@ document.getElementById('new').addEventListener('click', addNewFunc);
 document.getElementById('cont').addEventListener('click', contactFunc);
 
 // Date
-const date = new Date();
+const date = DateTime.now();
 document.getElementById('date').innerHTML = date;
-

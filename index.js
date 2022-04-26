@@ -1,8 +1,8 @@
 // Import BooksRack class
-import { BooksRack } from './modules/mainClasses.js';
+import BooksRack from './modules/BookRackClass.js';
 
-// Import AddNewBook Function
-import { addNewBook } from './modules/addBookFunc.js';
+// Import Book class
+import Book from './modules/bookClass.js';
 
 // Import DisplayElements Function
 import displayElements from './modules/displayElements.js';
@@ -17,7 +17,24 @@ import { DateTime } from './modules/luxon.js';
 const storedBooks = new BooksRack();
 storedBooks.UpdateRack();
 const addBtn = document.getElementById('addBtn');
-addBtn.addEventListener('click', addNewBook);
+const bookTitle = document.getElementById('title');
+const author = document.getElementById('author');
+let stringData = JSON.stringify(storedBooks.Books);
+let book;
+addBtn.addEventListener('click', () => {
+  if (!bookTitle.value || !author.value) {
+    alert('Enter both book title and author please');
+    // Display localStorage Books Collection entries
+  } else {
+    book = new Book(bookTitle.value, author.value);
+    storedBooks.Books.push(book);
+    bookTitle.value = '';
+    author.value = '';
+    stringData = JSON.stringify(storedBooks.Books);
+    localStorage.setItem('Books', stringData);
+    window.location.reload();
+  }
+});
 
 // Display localStorage Books Collection entries
 displayElements();

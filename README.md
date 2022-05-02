@@ -1,5 +1,7 @@
 # Awesome books ES6 version 🆕!
 
+See it live --> [Awesome Books](https://github.com/jr-cast/Awesome-books-with-ES6)
+
 ![image](https://user-images.githubusercontent.com/58822719/166174718-62aa5677-6194-436e-892c-892db422c4aa.png)
 
 Main objectives of project were:

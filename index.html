@@ -42,24 +42,35 @@
       <ul id="bookShelf">
       </ul>
     </section>
-    <section id="addBook" class="userInput hidden">
-      <h2>Add a new book</h2>
-      <input id="title" type="text" placeholder="Title" required>
-      <input id="author" type="text" placeholder="Author" required>
+    <section id="addBook"
+      class="userInput hidden h-full p-16 flex flex-col justify-center w-full lg:w-9/12 lg:items-center">
+      <h2 class="mb-4 font-bold lg:text-3xl">Add a new book</h2>
+      <input id="title" type="text" placeholder="Title" required
+        class="border border-black w-full rounded p-2 mb-2 sm:w-3/4">
+      <input id="author" type="text" placeholder="Author" required
+        class="border border-black w-full rounded p-2 sm:w-3/4">
       <div id="btncont">
-        <button id="addBtn">Add</button>
+        <button id="addBtn"
+          class="bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white rounded shadow-md shadow-slate-400 text-md sm:ml-2 mt-4 lg:py-2 lg:px-8 lg:text-2xl">
+          Add Book
+        </button>
       </div>
     </section>
-    <footer id="foot">Copyright 2022</footer>
-    <section id="contact" class="contantInfo hidden">
-      <h1>Contact information</h1>
-      <p>Do you have any question or you just to say "Hello"? You can reach out to us!</p>
+    <section id="contact" class="contantInfo hidden text-2xl h-full flex flex-col justify-center p-8 bg-blue-100">
+      <h1 class="font-bold underline">Contact information</h1>
+      <p>Do you have any question or you just to say "Hello"? Sent me an email 👨‍💻</p>
       <ul class="contactList">
-        <li>Our E-mail: random@gmail.com</li>
-        <li>Our Phone numbers: +1234567890</li>
-        <li>Our address: streetname 22, B09987 City, Country</li>
+        <li class="pt-8">castanos@protonmail.com</li>
       </ul>
     </section>
+    <footer id="foot" class="border-t-2 border-blue-400 w-full h-20 flex justify-center items-center lg:w-9/12">
+      <p class="tracking-wide">jr-cast -->
+        <a href="https://github.com/jr-cast" class="font-bold text-blue-500">Github</a> |
+        <a href="https://www.linkedin.com/in/josercastanos/" class="font-bold text-blue-500">Linkedin</a> |
+        <a href="https://twitter.com/josercastanos" class="font-bold text-blue-500">Twitter</a> |
+        <a href="https://jr-cast.dev/" class="font-bold text-blue-500">Portfolio</a>
+      </p>
+    </footer>
   </div>
   <script type="module" src="index.js"></script>
 </body>

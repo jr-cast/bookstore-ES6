@@ -1,6 +1,10 @@
 # Awesome books ES6 version 🆕!
 
-In this new iteration of the Awesome-books web app at microverse the main objectives were:
+See it live --> [Awesome Books](https://jr-cast-awesome-books.netlify.app/)
+
+![image](https://user-images.githubusercontent.com/58822719/166174718-62aa5677-6194-436e-892c-892db422c4aa.png)
+
+Main objectives of project were:
 
 * Use ES6 modules to write modular JavaScript.
 * Learn how to use proper ES6 syntax.
